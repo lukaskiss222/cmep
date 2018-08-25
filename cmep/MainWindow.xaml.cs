@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChoETL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,15 @@ namespace cmep
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var line in new ChoCSVReader("TRAFO-ReadReport.20180419123715.csv"))
+            {
+            }
+                
+            MessageBox.Show("asdasd");
         }
     }
 }
